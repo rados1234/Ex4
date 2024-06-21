@@ -20,12 +20,8 @@ public class BookCase {
         this.bookService = bookService;
     }
 
-    @GetMapping(path="/books")
-     public @ResponseBody List<Book> showBooks(){
-         return bookService.getBooks();
-    }
 
-    @GetMapping(path="/books1")
+    @GetMapping(path="/books")
     public String showBooks1(Model model) {
         model.addAttribute("books", bookService.getBooks());
         return "books1h";
