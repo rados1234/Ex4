@@ -93,7 +93,7 @@ h1 {
         <td th:text="${book.title}"/>
         <td th:text="${book.category}"/>
         <td th:text="${book.pages}"/>
-        <td th:text="${book.forKids}"/>
+        <td th:text="${book.forKids} ? 'Yes' : 'No'"/>
     </tr>
 </table>
 
